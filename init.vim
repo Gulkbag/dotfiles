@@ -66,6 +66,10 @@ Plug 'tpope/vim-sensible'
 "Syntastic syntax checking
 Plug 'scrooloose/syntastic'
 
+" Haskell plugins
+Plug 'alx741/vim-stylishask'
+Plug 'neovimhaskell/haskell-vim'
+
 call plug#end()
 
 " Configuartion For vim
@@ -106,8 +110,3 @@ imap <C-Z> <Esc> :undo <Enter>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0

@@ -86,8 +86,8 @@ Plug 'scrooloose/syntastic'
 Plug 'alx741/vim-stylishask'
 Plug 'neovimhaskell/haskell-vim'
 
-" Colorscheme for people who are tired from solarized (truly sexy)
-Plug 'romainl/apprentice'
+" I mean come on you probably already expected this (truly sexy)
+Plug 'morhetz/gruvbox'
 
 " Plugin adds automatic headers
 Plug 'alpertuna/vim-header'
@@ -122,18 +122,18 @@ set number
 
 syntax enable
 set termguicolors
-colorscheme apprentice
+colorscheme gruvbox
+
+" gruvbox config
+let g:gruvbox_italic = 1
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_improved_strings = 1
 
 " Key stroke mappings
 nmap <C-S> :w <Enter>
 imap <C-S> <Esc> :w <Enter>
 
 imap <C-Z> <Esc> :undo <Enter>
-
-" syntastic configuration
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 " Header file config
 let g:header_field_author = 'Ahmed Nasser'
@@ -262,3 +262,14 @@ set statusline+=%8*\ %y\                                 " FileType
 set statusline+=%7*\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\ " Encoding & Fileformat
 set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
 set statusline+=%0*\ %3p%%\ \ %l:\ %3c\                 " Rownumber/total (%)
+
+" Simple thing for tmux to change cursor shape in modes
+if exists('$TMUX')
+	let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+	let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+

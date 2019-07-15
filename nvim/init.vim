@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Ahmed Nasser <ahmednasser@gmail.com>
 " Date              : 13.07.2019
-" Last Modified Date: 14.07.2019
+" Last Modified Date: 15.07.2019
 " Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 " File              : init.vim
 " Date              : 12.07.2019
@@ -95,6 +95,12 @@ Plug 'alpertuna/vim-header'
 " Plugin for organizing and formatting ASCII tables (like org-mode for emacs)
 Plug 'dhruvasagar/vim-table-mode'
 
+" Better intergation with Unix
+Plug 'tpope/vim-eunuch'
+
+" Comment stuff out
+Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 " Configuartion For vim
@@ -166,10 +172,10 @@ let g:currentmode={
       \ 'no' : 'N·Operator Pending ',
       \ 'v'  : 'V ',
       \ 'V'  : 'V·Line ',
-      \ '' : 'V·Block ',
+      \ '^V' : 'V·Block ',
       \ 's'  : 'Select ',
       \ 'S'  : 'S·Line ',
-      \ '' : 'S·Block ',
+      \ '^S' : 'S·Block ',
       \ 'i'  : 'I ',
       \ 'R'  : 'R ',
       \ 'Rv' : 'V·Replace ',
@@ -195,14 +201,15 @@ highlight User9 cterm=None gui=None ctermfg=007 guifg=fgcolor
 
 " Automatically change the statusline color depending on mode
 function! ChangeStatuslineColor()
+  exe "hi! StatusLine guibg=a89984"
   if (mode() =~# '\v(n|no)')
-    exe 'hi! StatusLine ctermfg=008 guifg=fgcolor gui=None cterm=None'
+    exe 'hi! StatusLine ctermfg=009 guifg=#d79921'
   elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block' || get(g:currentmode, mode(), '') ==# 't')
-    exe 'hi! StatusLine ctermfg=005 guifg=#00ff00 gui=None cterm=None'
+    exe 'hi! StatusLine ctermfg=007 guifg=#458588'
   elseif (mode() ==# 'i')
-    exe 'hi! StatusLine ctermfg=004 guifg=#6CBCE8 gui=None cterm=None'
+    exe 'hi! StatusLine ctermfg=004 guifg=#b16286'
   else
-    exe 'hi! StatusLine ctermfg=006 guifg=orange gui=None cterm=None'
+    exe 'hi! StatusLine ctermfg=006 guifg=d65d0e'
   endif
 
   return ''
@@ -259,7 +266,6 @@ set statusline+=%{SyntasticStatuslineFlag()}             " Syntastic errors
 set statusline+=%*
 set statusline+=%9*\ %=                                  " Space
 set statusline+=%8*\ %y\                                 " FileType
-set statusline+=%7*\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\ " Encoding & Fileformat
 set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
 set statusline+=%0*\ %3p%%\ \ %l:\ %3c\                 " Rownumber/total (%)
 

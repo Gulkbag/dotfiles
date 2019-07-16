@@ -101,6 +101,10 @@ Plug 'tpope/vim-eunuch'
 " Comment stuff out
 Plug 'tpope/vim-commentary'
 
+" You guys are modern and use clang format
+" i am savage and use GNU INDENT (for C only because it's the language of gods)
+Plug 'crosbymichael/vim-cfmt'
+
 call plug#end()
 
 " Configuartion For vim
@@ -163,6 +167,10 @@ if g:colors_name == 'hybrid'
   highlight TabLineSel ctermfg=black ctermfg=white guibg=#c5c8c6 guifg=#1d1f21
   highlight BufTabLineActive cterm=none gui=none
 endif
+
+" C formmatter options
+autocmd BufWritePre *.c,*.h Cfmt
+let g:cfmt_style = '-kr'
 
 " My Own StatusLine, Just done with the help of stackoverflow and fucking with
 " the terminal

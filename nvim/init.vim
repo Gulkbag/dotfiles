@@ -1,21 +1,23 @@
 " File              : init.vim
 " Author            : Ahmed Nasser <ahmednasser@gmail.com>
 " Date              : 13.07.2019
-" Last Modified Date: 15.07.2019
+" Last Modified Date: 22.07.2019
 " Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 " File              : init.vim
 " Date              : 12.07.2019
 " Last Modified Date: 12.07.2019
 
-" Need to change shell because vim needs a more POSIX compliant one
-if &shell =~# 'fish$'
-	set shell=sh
-endif
+" Very Important: Fish shell (which i use) isn't compatible with alot of vim
+" plugins and vim itself so i set it to use bash instead
+set shell=/bin/bash
 
 " Plugins
 " i use vim-plug
 
 call plug#begin('~/.local/share/nvim/plugged')
+
+" Custom start screens
+Plug 'mhinz/vim-startify'
 
 " File type icons for NERDtree and the other stuff
 Plug 'ryanoasis/vim-devicons'
@@ -48,6 +50,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Better tabbing
 Plug 'ervandew/supertab'
+
+" Rainbows
+Plug 'oblitum/rainbow'
 
 " Auto pairs, vim plugin for auto parenthesis, brackets, quotes, whatever
 " completion, like with other text editors and ides this is essential
@@ -105,6 +110,18 @@ Plug 'tpope/vim-commentary'
 " i am savage and use GNU INDENT (for C only because it's the language of gods)
 Plug 'crosbymichael/vim-cfmt'
 
+" Jumpto Defention
+Plug 'c-brenn/phoenix.vim'
+Plug 'tpope/vim-projectionist' " required for some navigation features
+
+" For typescript
+Plug 'leafgarland/typescript-vim'
+
+" Clojure/Lisp stuff, Fireplace is for REPL intergation 
+Plug 'guns/vim-clojure-static'
+Plug 'tpope/vim-fireplace'
+Plug 'guns/vim-clojure-highlight'
+
 call plug#end()
 
 " Configuartion For vim
@@ -120,15 +137,36 @@ set noshowmode
 set encoding=utf-8
 set fileencoding=utf-8
 
+let g:rainbow_active = 1
+
 set nobackup
 set writebackup
 set noswapfile
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+map <CR> :noh<CR>
+
+set cursorline
+set cursorcolumn
 
 "Reminder to keep my lines no more than 110 chars
 set colorcolumn=110
 highlight ColorColumn ctermbg=006
 "Show line numbers
 set number
+
+" Tab/indent stuff
+set tabstop=2
+set softtabstop=2
+set expandtab
+set shiftwidth=2
+
+" Leader
+let g:mapleader=' '
+
 
 syntax enable
 set termguicolors

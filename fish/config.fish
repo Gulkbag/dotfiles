@@ -6,3 +6,4 @@ abbr --add rrc 		nvim ~/.config/ranger/rc.conf
 abbr --add comprc 	nvim ~/.config/compton.conf
 
 set -g theme_color_scheme gruvbox
+set -x -U GOPATH $HOME/go

@@ -149,9 +149,6 @@ set ignorecase
 set smartcase
 map <CR> :noh<CR>
 
-set cursorline
-set cursorcolumn
-
 "Reminder to keep my lines no more than 110 chars
 set colorcolumn=110
 highlight ColorColumn ctermbg=006
@@ -166,7 +163,6 @@ set shiftwidth=2
 
 " Leader
 let g:mapleader=' '
-
 
 syntax enable
 set termguicolors

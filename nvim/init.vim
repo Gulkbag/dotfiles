@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Ahmed Nasser <ahmednasser@gmail.com>
 " Date              : 13.07.2019
-" Last Modified Date: 22.07.2019
+" Last Modified Date: 23.07.2019
 " Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 " File              : init.vim
 " Date              : 12.07.2019
@@ -320,4 +320,5 @@ else
 	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-
+" Autocmd
+autocmd BufWritePost config.h,config.def.h !sudo make install

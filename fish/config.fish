@@ -17,10 +17,14 @@ function fish_prompt
   echo -n '['
   set_color d79921
   echo -n $USER
-  set_color ebdbb2
+  set_color normal
   echo -n ' >> '
   set_color 98971a
   echo -n (prompt_pwd)
+  set_color normal
+  echo -n ' >> '
+  set_color cc241d
+  echo -n " "(git branch 2>/dev/null | grep '^*' | colrm 1 2)
   set_color normal
   echo -n '] '
 end

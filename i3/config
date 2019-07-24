@@ -20,7 +20,9 @@ font pango:Ubuntu Mono derivative Powerline 14
 
 # Auto start items
 exec compton
-exec feh --bg-scale ~/pexels-346529.jpg
+exec feh --bg-scale ~/WP/plane_mountains-HD.jpg
+exec_always --no-startup-id /home/gulkbag/.config/polybar/launch.sh
+
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -180,20 +182,17 @@ set $bgcolor #282828
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks -c ~/.config/i3blocks/config
-	position top
-	separator_symbol " >>> "
-	colors {
-		
-		background $bgcolor
-		separator  #d65d0e
+    status_command i3blocks -c ~/.config/i3blocks/config
+    position top
+    separator_symbol " >> "
+    colors {
+        background $bgcolor
+        separator  #d65d0e
 
-		#    		    border 	 background 	 text
-		focused_workspace  $bgcolor    	 $bgcolor 	 #d5c4a1
-		inactive_workspace #fabd2f 	 #282828         #d5c4a1
-
-		
-	}
+        #                   border      background  text
+        focused_workspace  $bgcolor    $bgcolor    #d5c4a1
+        inactive_workspace #fabd2f     #282828     #d5c4a1
+    }
 }
 
 for_window [class="^.*"] border pixel 0
@@ -204,6 +203,9 @@ bindsym $mod+Ctrl+Down          resize shrink height 10 px or 1 ppt
 bindsym $mod+Ctrl+Left          resize grow width 10 px or 1 ppt
 
 bindsym $mod+Shift+semicolon    exec tabbed -c surf -e
+
+bindsym $mod+Shift+x exec /home/gulkbag/.config/i3/prompt.sh "Do you want to shutdown?" sudo shutdown
+bindsym $mod+Shift+v exec /home/gulkbag/.config/i3/prompt.sh "Do you want to rebbot?" sudo reboot 
 
 gaps inner 20
 gaps outer 20

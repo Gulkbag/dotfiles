@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Ahmed Nasser <ahmednasser@gmail.com>
 " Date              : 13.07.2019
-" Last Modified Date: 23.07.2019
+" Last Modified Date: 24.07.2019
 " Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 " File              : init.vim
 " Date              : 12.07.2019

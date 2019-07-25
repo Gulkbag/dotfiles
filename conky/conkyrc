@@ -1,0 +1,47 @@
+conky.config = {
+	background = true,
+	double_buffer = true,
+	override_utf8_locale = true,
+
+	update_interval = 1,
+	cpu_avg_samples = 1,
+	net_avg_samples = 2,
+
+	own_window_class = 'Conky',
+	own_window = true,
+ 	own_window_type = 'override',
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+
+ 	alignment = 'top_left',
+  gap_y = 0,
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+	minimum_width = 500,
+ 	maximum_width = 500,
+ 	minimum_height = 700,
+
+	draw_shades = true,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+	use_xft = true,
+	--~ font = 'Ubuntu Mono derivative Powerline:size=14',
+	xftalpha = 0.9,
+	default_color = '#BBBBBB',
+
+-- Lua Load #
+	lua_load = '~/.conky/conky_dashboard.lua',
+	lua_draw_hook_pre = 'init_rings',
+};
+
+-- Syntax : ${STUFF}
+conky.text = [[
+${goto 185}${voffset 70}CPU
+
+${goto 182}${voffset 115}MEM
+
+${goto 192}${voffset 65}FS
+]];

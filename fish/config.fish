@@ -4,13 +4,18 @@
 #
 ####################
 
-abbr --add nvimrc 	nvim ~/.config/nvim/init.vim
-abbr --add fishrc 	nvim ~/.config/fish/config.fish
-abbr --add dev 		  cd ~/dev/
-abbr --add i3rc 	  nvim ~/.config/i3/config
-abbr --add rrc 		  nvim ~/.config/ranger/rc.conf
-abbr --add comprc 	nvim ~/.config/compton.conf
-abbr --add surf     tabbed -c surf -e
+fish_vi_key_bindings # Vi Mode
+
+abbr --add nvc 	nvim ~/.config/nvim/init.vim
+abbr --add fc 	nvim ~/.config/fish/config.fish
+abbr --add df 	cd ~/dev/ && ls
+abbr --add i3c 	nvim ~/.config/i3/config
+abbr --add rrc	nvim ~/.config/ranger/rc.conf
+abbr --add cc 	nvim ~/.config/compton.conf
+abbr --add srf  tabbed -c surf -e
+abbr --add vim  nvim # I sometimes type vim instead of nvim
+abbr --add df   cd ~/dev/dotfiles/
+abbr --add dp   sh deploy.sh
 
 function fish_prompt
   set_color normal
@@ -33,8 +38,31 @@ end
 
 function fish_right_prompt
   set_color fe8019
-  date
+  echo (date '+%Y %b %d %I:%M%p')
+end
+
+function fish_mode_prompt --description 'Displays current mode'
+  # Do nothing if not in vi mode
+  if test "$fish_key_bindings" = "fish_vi_key_bindings"
+    switch $fish_bind_mode
+      case default
+        set_color --bold red
+        echo N
+      case insert
+        set_color --bold green
+        echo I
+      case replace-one
+        set_color --bold green
+        echo R
+      case visual
+        set_color --bold brmagenta
+        echo V
+    end
+    set_color normal
+    printf " "
+  end
 end
 
 set -x -U GOPATH $HOME/go
 set -x -U EDITOR /usr/bin/nvim
+

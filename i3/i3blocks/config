@@ -5,7 +5,8 @@ label=CPU
 color=#fabd2f
 
 [date]
-command=date
+label=📅
+command=echo $(date '+%Y %b %d %I:%M%p') 
 interval=1
 color=#fb4934
 
@@ -13,5 +14,3 @@ color=#fb4934
 command=curl "wttr.in/?format=%l:%20%c%20%t%20"
 interval=1800
 color=#b9bb26
-
-

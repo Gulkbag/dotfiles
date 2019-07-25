@@ -8,7 +8,7 @@ fish_vi_key_bindings # Vi Mode
 
 abbr --add nvc 	nvim ~/.config/nvim/init.vim
 abbr --add fc 	nvim ~/.config/fish/config.fish
-abbr --add df 	cd ~/dev/ && ls
+abbr --add df 	cd ~/dev/
 abbr --add i3c 	nvim ~/.config/i3/config
 abbr --add rrc	nvim ~/.config/ranger/rc.conf
 abbr --add cc 	nvim ~/.config/compton.conf

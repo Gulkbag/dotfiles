@@ -16,6 +16,11 @@ abbr --add srf  tabbed -c surf -e
 abbr --add vim  nvim # I sometimes type vim instead of nvim
 abbr --add df   cd ~/dev/dotfiles/
 abbr --add dp   sh deploy.sh
+abbr --add xi   sudo xbps-install -Sy
+abbr --add xr   sudo xbps-remove -R
+abbr --add xq   xbps-query -Rs
+abbr --add rmc  sudo xbps-remove -Oo # Removes all cached stuff
+abbr --add upd  sudo xbps-install -Su # Update
 
 function fish_prompt
   set_color normal

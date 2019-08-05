@@ -208,6 +208,9 @@ bindsym $mod+Shift+semicolon    exec tabbed -c surf -e
 bindsym $mod+Shift+x exec /home/gulkbag/.config/i3/prompt.sh "Do you want to shutdown?" sudo shutdown
 bindsym $mod+Shift+v exec /home/gulkbag/.config/i3/prompt.sh "Do you want to rebbot?" sudo reboot 
 
+bindsym $mod+Tab       workspace next
+bindsym $mod+Shift+Tab workspace prev
+
 gaps inner 10
 gaps outer 40
 

@@ -71,3 +71,4 @@ end
 set -x -U GOPATH $HOME/go
 set -x -U EDITOR /usr/bin/nvim
 
+

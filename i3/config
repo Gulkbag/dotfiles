@@ -195,7 +195,7 @@ set $bgcolor #282828
 #     }
 # }
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id $HOME/.config/polybar/launch.sh
 
 for_window [class="^.*"] border pixel 0
 
@@ -210,6 +210,6 @@ bindsym $mod+Shift+x exec /home/gulkbag/.config/i3/prompt.sh "Do you want to shu
 bindsym $mod+Shift+v exec /home/gulkbag/.config/i3/prompt.sh "Do you want to rebbot?" sudo reboot 
 
 gaps inner 10
-gaps outer 10
+gaps outer 40
 
 exec feh --bg-scale ~/pexels-956999.jpg

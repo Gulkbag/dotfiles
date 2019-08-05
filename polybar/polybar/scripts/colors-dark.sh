@@ -1,4 +1,9 @@
 #!/bin/bash
+# File              : colors-dark.sh
+# Author            : Ahmed Nasser <ahmednasser@gmail.com>
+# Date              : 05.08.2019
+# Last Modified Date: 05.08.2019
+# Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 
 ## Author : Aditya Shakya
 ## Github : adi1090x
@@ -17,7 +22,7 @@ sed -i -e 's/shade6 = .*/shade6 = #FFCA28/g' $PDIR/config.ini
 sed -i -e 's/shade7 = .*/shade7 = #FFD54F/g' $PDIR/config.ini
 sed -i -e 's/shade8 = .*/shade8 = #FFE082/g' $PDIR/config.ini
 sed -i -e 's/accent = .*/accent = #FFB300/g' $PDIR/config.ini
-sed -i -e 's/bground = .*/bground = #1D1F28/g' $PDIR/config.ini
+sed -i -e 's/bground = .*/bground = #881D1F28/g' $PDIR/config.ini
 sed -i -e 's/modulefg-alt = .*/modulefg-alt = #f7f7f7/g' $PDIR/config.ini
 # Restarting polybar
 $LAUNCH &
@@ -33,7 +38,7 @@ sed -i -e 's/shade6 = .*/shade6 = #42A5F5/g' $PDIR/config.ini
 sed -i -e 's/shade7 = .*/shade7 = #64B5F6/g' $PDIR/config.ini
 sed -i -e 's/shade8 = .*/shade8 = #90CAF9/g' $PDIR/config.ini
 sed -i -e 's/accent = .*/accent = #1E88E5/g' $PDIR/config.ini
-sed -i -e 's/bground = .*/bground = #1D1F28/g' $PDIR/config.ini
+sed -i -e 's/bground = .*/bground = #881D1F28/g' $PDIR/config.ini
 sed -i -e 's/modulefg-alt = .*/modulefg-alt = #f7f7f7/g' $PDIR/config.ini
 # Restarting polybar
 $LAUNCH &
@@ -49,7 +54,7 @@ sed -i -e 's/shade6 = .*/shade6 = #78909C/g' $PDIR/config.ini
 sed -i -e 's/shade7 = .*/shade7 = #90A4AE/g' $PDIR/config.ini
 sed -i -e 's/shade8 = .*/shade8 = #B0BEC5/g' $PDIR/config.ini
 sed -i -e 's/accent = .*/accent = #546E7A/g' $PDIR/config.ini
-sed -i -e 's/bground = .*/bground = #1D1F28/g' $PDIR/config.ini
+sed -i -e 's/bground = .*/bground = #881D1F28/g' $PDIR/config.ini
 sed -i -e 's/modulefg-alt = .*/modulefg-alt = #f7f7f7/g' $PDIR/config.ini
 # Restarting polybar
 $LAUNCH &
@@ -65,7 +70,7 @@ sed -i -e 's/shade6 = .*/shade6 = #8D6E63/g' $PDIR/config.ini
 sed -i -e 's/shade7 = .*/shade7 = #A1887F/g' $PDIR/config.ini
 sed -i -e 's/shade8 = .*/shade8 = #BCAAA4/g' $PDIR/config.ini
 sed -i -e 's/accent = .*/accent = #6D4C41/g' $PDIR/config.ini
-sed -i -e 's/bground = .*/bground = #1D1F28/g' $PDIR/config.ini
+sed -i -e 's/bground = .*/bground = #881D1F28/g' $PDIR/config.ini
 sed -i -e 's/modulefg-alt = .*/modulefg-alt = #f7f7f7/g' $PDIR/config.ini
 # Restarting polybar
 $LAUNCH &
@@ -81,7 +86,7 @@ sed -i -e 's/shade6 = .*/shade6 = #26C6DA/g' $PDIR/config.ini
 sed -i -e 's/shade7 = .*/shade7 = #4DD0E1/g' $PDIR/config.ini
 sed -i -e 's/shade8 = .*/shade8 = #80DEEA/g' $PDIR/config.ini
 sed -i -e 's/accent = .*/accent = #00ACC1/g' $PDIR/config.ini
-sed -i -e 's/bground = .*/bground = #1D1F28/g' $PDIR/config.ini
+sed -i -e 's/bground = .*/bground = #881D1F28/g' $PDIR/config.ini
 sed -i -e 's/modulefg-alt = .*/modulefg-alt = #f7f7f7/g' $PDIR/config.ini
 # Restarting polybar
 $LAUNCH &
@@ -97,7 +102,7 @@ sed -i -e 's/shade6 = .*/shade6 = #FF7043/g' $PDIR/config.ini
 sed -i -e 's/shade7 = .*/shade7 = #FF8A65/g' $PDIR/config.ini
 sed -i -e 's/shade8 = .*/shade8 = #FFAB91/g' $PDIR/config.ini
 sed -i -e 's/accent = .*/accent = #F4511E/g' $PDIR/config.ini
-sed -i -e 's/bground = .*/bground = #1D1F28/g' $PDIR/config.ini
+sed -i -e 's/bground = .*/bground = #881D1F28/g' $PDIR/config.ini
 sed -i -e 's/modulefg-alt = .*/modulefg-alt = #f7f7f7/g' $PDIR/config.ini
 # Restarting polybar
 $LAUNCH &

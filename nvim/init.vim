@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Ahmed Nasser <ahmednasser@gmail.com>
 " Date              : 13.07.2019
-" Last Modified Date: 01.08.2019
+" Last Modified Date: 05.08.2019
 " Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 " File              : init.vim
 " Date              : 12.07.2019
@@ -93,6 +93,7 @@ Plug 'neovimhaskell/haskell-vim'
 
 " I mean come on you probably already expected this (truly sexy)
 Plug 'morhetz/gruvbox'
+Plug 'chriskempson/base16-vim'
 
 " Plugin adds automatic headers
 Plug 'alpertuna/vim-header'
@@ -166,7 +167,8 @@ let g:mapleader=' '
 
 syntax enable
 set termguicolors
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme base16-default-dark
 
 " gruvbox config
 let g:gruvbox_italic = 1

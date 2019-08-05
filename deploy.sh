@@ -5,6 +5,7 @@
 # Last Modified Date: 05.08.2019
 # Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 
+cp -rf ~/.config/kitty/ ~/dev/dotfiles/kitty/
 cp -rf ~/.config/polybar/ ~/dev/dotfiles/polybar/
 cp ~/.config/i3/config ~/dev/dotfiles/i3/
 cp ~/.config/i3blocks/config ~/dev/dotfiles/i3/i3blocks/

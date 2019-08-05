@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Ahmed Nasser <ahmednasser@gmail.com>
 " Date              : 13.07.2019
-" Last Modified Date: 24.07.2019
+" Last Modified Date: 01.08.2019
 " Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 " File              : init.vim
 " Date              : 12.07.2019
@@ -46,7 +46,7 @@ Plug 'scrooloose/nerdtree'
 
 " Coc.nvim a great plugin for linting, code completion, and everything in
 " between
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master'}
 
 " Better tabbing
 Plug 'ervandew/supertab'

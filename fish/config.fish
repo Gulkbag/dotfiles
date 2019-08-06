@@ -21,6 +21,7 @@ abbr --add xr   sudo xbps-remove -Ry
 abbr --add xq   xbps-query -Rs
 abbr --add rmc  sudo xbps-remove -Ooy # Removes all cached stuff
 abbr --add upd  sudo xbps-install -Suy # Update
+abbr --add lock i3lock-fancy -t "\"See you later\"" -f "\"Hack-Bold-Nerd-Font-Complete-Mono\""
 
 function fish_prompt
   set_color normal

@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Ahmed Nasser <ahmednasser@gmail.com>
 # Date              : 14.07.2019
-# Last Modified Date: 05.08.2019
+# Last Modified Date: 06.08.2019
 # Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 
 cp -rf ~/.config/kitty/ ~/dev/dotfiles/

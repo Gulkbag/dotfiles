@@ -1,4 +1,9 @@
 #!/bin/bash
+# File              : colors-light.sh
+# Author            : Ahmed Nasser <ahmednasser@gmail.com>
+# Date              : 06.08.2019
+# Last Modified Date: 06.08.2019
+# Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 
 ## Author : Aditya Shakya
 ## Github : adi1090x
@@ -273,7 +278,7 @@ sed -i -e 's/shade6 = .*/shade6 = #EF5350/g' $PDIR/config.ini
 sed -i -e 's/shade7 = .*/shade7 = #E57373/g' $PDIR/config.ini
 sed -i -e 's/shade8 = .*/shade8 = #EF9A9A/g' $PDIR/config.ini
 sed -i -e 's/accent = .*/accent = #E53935/g' $PDIR/config.ini
-sed -i -e 's/bground = .*/bground = #f7f7f7/g' $PDIR/config.ini
+sed -i -e 's/bground = .*/bground = #88f7f7f7/g' $PDIR/config.ini
 sed -i -e 's/modulefg-alt = .*/modulefg-alt = #1D1F28/g' $PDIR/config.ini
 # Restarting polybar
 $LAUNCH &

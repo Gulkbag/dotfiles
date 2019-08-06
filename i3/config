@@ -45,7 +45,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+b exec emacs
 
 # Screenshot
-bindsym $mod+Shift+n exec scrot ~/screen.png
+bindsym $mod+Shift+n exec scrot ~/screen4.png
 
 # start dmenu (a program launcher)
 # Also gruvbox theme
@@ -214,6 +214,6 @@ bindsym $mod+Shift+Tab workspace prev
 gaps inner 10
 gaps outer 40
 
-border_radius 5
+# border_radius 5
 
 exec feh --bg-scale ~/pexels-956999.jpg

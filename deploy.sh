@@ -6,7 +6,7 @@
 # Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 
 cp -rf ~/.config/kitty/ ~/dev/dotfiles/
-cp -rf ~/.config/polybar/ ~/dev/dotfiles/polybar/
+cp -rf ~/.config/polybar/ ~/dev/dotfiles/
 cp ~/.config/i3/config ~/dev/dotfiles/i3/
 cp ~/.config/i3blocks/config ~/dev/dotfiles/i3/i3blocks/
 cp ~/.config/nvim/init.vim ~/dev/dotfiles/nvim/

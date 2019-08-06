@@ -5,6 +5,8 @@
 # Last Modified Date: 06.08.2019
 # Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 
+cp ~/.bash_profile ~/dev/dotfiles/
+cp ~/.bashrc ~/dev/dotfiles/
 cp -rf ~/.config/kitty/ ~/dev/dotfiles/
 cp -rf ~/.config/polybar/ ~/dev/dotfiles/
 cp ~/.config/i3/config ~/dev/dotfiles/i3/

@@ -2,12 +2,14 @@
 # File              : .bashrc
 # Author            : Ahmed Nasser <ahmednasser@gmail.com>
 # Date              : 02.08.2019
-# Last Modified Date: 06.08.2019
+# Last Modified Date: 07.08.2019
 # Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 # .bashrc
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+(cat ~/.cache/wal/sequences &)
 
 stty -ixon # Disable ctrl-s and ctrl-q
 shopt -s autocd # Zsh like autocd

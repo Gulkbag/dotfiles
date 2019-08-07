@@ -94,6 +94,8 @@ Plug 'neovimhaskell/haskell-vim'
 " I mean come on you probably already expected this (truly sexy)
 Plug 'morhetz/gruvbox'
 Plug 'chriskempson/base16-vim'
+Plug 'dylanaraps/wal.vim'
+Plug 'ajh17/spacegray.vim'
 
 " Plugin adds automatic headers
 Plug 'alpertuna/vim-header'
@@ -167,13 +169,18 @@ let g:mapleader=' '
 
 syntax enable
 set termguicolors
-" colorscheme gruvbox
-colorscheme base16-default-dark
+" colorscheme spacegray
+colorscheme spacegray
 
 " gruvbox config
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_improved_strings = 1
+
+" spacegray config
+let g:spacegray_underline_search = 1
+let g:spacegray_use_italics = 1
+let g:spacegray_low_contrast = 1
 
 " Key stroke mappings
 nmap <C-S> :w <Enter>

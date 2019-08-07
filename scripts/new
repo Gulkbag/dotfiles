@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+# File              : new
+# Author            : Ahmed Nasser <ahmednasser@gmail.com>
+# Date              : 07.08.2019
+# Last Modified Date: 07.08.2019
+# Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
+use strict;
+use warnings;
+
+my $wpPath = '/home/gulkbag/WP/';
+my $switchTime = 3600;
+
+my @photos = `find $wpPath -type f | grep [jJ][pP][eE]*[gG]`;
+chomp(@photos);
+my $photo;
+
+$photo = $photos[rand($#photos)*2];
+`xwallpaper --stretch $photo`;
+`wal -i $photo`;
+sleep($switchTime);

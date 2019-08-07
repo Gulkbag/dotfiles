@@ -19,7 +19,7 @@ font pango:Hack Nerd Font 8
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 
 # Auto start items
-exec --nos-startup-id compton
+exec --no-startup-id compton
 exec --no-startup-id feh --bg-scale ~/WP/plane_mountains-HD.jpg
 
 # Before i3 v4.8, we used to recommend this one as the default:
@@ -49,7 +49,7 @@ bindsym $mod+Shift+n exec scrot ~/screen4.png
 
 # start dmenu (a program launcher)
 # Also gruvbox theme
-bindsym $mod+d exec dmenu_run -nb '#282828' -nf '#ebdbb2' -sb '#458588' -sf '#282828' -l 15
+bindsym $mod+d exec dmenu_run -nb '#181818' -nf '#d8d8d8' -sb '#d8d8d8' -sf '#181818' -l 15
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -89,7 +89,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -211,9 +211,11 @@ bindsym $mod+Shift+v exec /home/gulkbag/.config/i3/prompt.sh "Do you want to reb
 bindsym $mod+Tab       workspace next
 bindsym $mod+Shift+Tab workspace prev
 
+bindsym $mod+s exec flameshot full -p ~/
+
 gaps inner 10
 gaps outer 40
 
-# border_radius 5
+border_radius 20
 
 exec feh --bg-scale ~/pexels-956999.jpg

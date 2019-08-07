@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Ahmed Nasser <ahmednasser@gmail.com>
 " Date              : 13.07.2019
-" Last Modified Date: 05.08.2019
+" Last Modified Date: 07.08.2019
 " Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 " File              : init.vim
 " Date              : 12.07.2019
@@ -324,3 +324,4 @@ endif
 
 " Autocmd
 autocmd BufWritePost config.h,config.def.h !sudo make install
+autocmd BufWritePost config-t2.ini,config.ini !scripts/type-switch.sh

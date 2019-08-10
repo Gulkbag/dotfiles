@@ -2,14 +2,17 @@
 # File              : .bashrc
 # Author            : Ahmed Nasser <ahmednasser@gmail.com>
 # Date              : 02.08.2019
-# Last Modified Date: 07.08.2019
+# Last Modified Date: 09.08.2019
 # Last Modified By  : Ahmed Nasser <ahmednasser@gmail.com>
 # .bashrc
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-(cat ~/.cache/wal/sequences &)
+[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null
+
+# Wall colorscheme, comment if using st
+# (cat ~/.cache/wal/sequences &)
 
 stty -ixon # Disable ctrl-s and ctrl-q
 shopt -s autocd # Zsh like autocd
@@ -39,4 +42,17 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PS1="[\e[1;31m\u@\h \[\033[32m\]\w\033[1;33m\]\$(parse_git_branch)\e[0;37m] \n     >>>> "
+ranger_check() {
+  if pgrep ranger >/dev/null 2>&1
+    then
+      echo "₪"
+    else
+      echo ""
+  fi
+}
+
+export PS1="[\e[1;91m\u@\h \[\033[1;32m\]\w\033[1;33m\]\$(parse_git_branch) \e[0;37m] \n     >>>> "
+
+echo -e -n "\x1b[\x34 q"
+
+export PAGER="most"

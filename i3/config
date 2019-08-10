@@ -36,8 +36,8 @@ floating_modifier $mod
 bindsym $mod+Shift+m exec midori
 
 # start a terminal
-# bindsym $mod+Return exec st
-bindsym $mod+Return exec kitty
+# bindsym $mod+Return exec terminal
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -212,10 +212,11 @@ bindsym $mod+Tab       workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 bindsym $mod+s exec flameshot full -p ~/
+bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 gaps inner 10
 gaps outer 40
 
-border_radius 20
+# border_radius 20
 
 exec feh --bg-scale ~/pexels-956999.jpg
